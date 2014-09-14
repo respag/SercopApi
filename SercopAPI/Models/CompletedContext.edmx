@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ULT_BPMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ULT_BPM.dbo.vw_Completed' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_Completed">
+          <Key>
+            <PropertyRef Name="TASKID" />
+            <PropertyRef Name="Process" />
+            <PropertyRef Name="CodigoTipoContratacion" />
+            <PropertyRef Name="CodigoTipoCompra" />
+            <PropertyRef Name="CodigoInicialesEntidad" />
+            <PropertyRef Name="NumeroSecuenciaProceso" />
+            <PropertyRef Name="AnioCurso" />
+            <PropertyRef Name="Step" />
+            <PropertyRef Name="FechaProgramada" />
+          </Key>
+          <Property Name="PROCESSNAME" Type="nchar" MaxLength="48" />
+          <Property Name="INCIDENT" Type="int" />
+          <Property Name="STEPID" Type="char" MaxLength="64" />
+          <Property Name="STEPLABEL" Type="nchar" MaxLength="48" />
+          <Property Name="TASKID" Type="char" MaxLength="64" Nullable="false" />
+          <Property Name="TASKUSER" Type="nchar" MaxLength="256" />
+          <Property Name="STATUS" Type="int" />
+          <Property Name="Process" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="CodigoTipoContratacion" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CodigoTipoCompra" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CodigoInicialesEntidad" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="NumeroSecuenciaProceso" Type="int" Nullable="false" />
+          <Property Name="AnioCurso" Type="int" Nullable="false" />
+          <Property Name="ObjetoContratacion" Type="ntext" />
+          <Property Name="CodigoEstadoProceso" Type="nchar" MaxLength="10" />
+          <Property Name="Step" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="FechaProgramada" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ULT_BPMModelStoreContainer">
+          <EntitySet Name="vw_Completed" EntityType="Self.vw_Completed" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_Completed].[PROCESSNAME] AS [PROCESSNAME], 
+    [vw_Completed].[INCIDENT] AS [INCIDENT], 
+    [vw_Completed].[STEPID] AS [STEPID], 
+    [vw_Completed].[STEPLABEL] AS [STEPLABEL], 
+    [vw_Completed].[TASKID] AS [TASKID], 
+    [vw_Completed].[TASKUSER] AS [TASKUSER], 
+    [vw_Completed].[STATUS] AS [STATUS], 
+    [vw_Completed].[Process] AS [Process], 
+    [vw_Completed].[CodigoTipoContratacion] AS [CodigoTipoContratacion], 
+    [vw_Completed].[CodigoTipoCompra] AS [CodigoTipoCompra], 
+    [vw_Completed].[CodigoInicialesEntidad] AS [CodigoInicialesEntidad], 
+    [vw_Completed].[NumeroSecuenciaProceso] AS [NumeroSecuenciaProceso], 
+    [vw_Completed].[AnioCurso] AS [AnioCurso], 
+    [vw_Completed].[ObjetoContratacion] AS [ObjetoContratacion], 
+    [vw_Completed].[CodigoEstadoProceso] AS [CodigoEstadoProceso], 
+    [vw_Completed].[Step] AS [Step], 
+    [vw_Completed].[FechaProgramada] AS [FechaProgramada]
+    FROM [dbo].[vw_Completed] AS [vw_Completed]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ULT_BPMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="vw_Completed">
+          <Key>
+            <PropertyRef Name="TASKID" />
+            <PropertyRef Name="Process" />
+            <PropertyRef Name="CodigoTipoContratacion" />
+            <PropertyRef Name="CodigoTipoCompra" />
+            <PropertyRef Name="CodigoInicialesEntidad" />
+            <PropertyRef Name="NumeroSecuenciaProceso" />
+            <PropertyRef Name="AnioCurso" />
+            <PropertyRef Name="Step" />
+            <PropertyRef Name="FechaProgramada" />
+          </Key>
+          <Property Name="PROCESSNAME" Type="String" MaxLength="48" FixedLength="true" Unicode="true" />
+          <Property Name="INCIDENT" Type="Int32" />
+          <Property Name="STEPID" Type="String" MaxLength="64" FixedLength="true" Unicode="false" />
+          <Property Name="STEPLABEL" Type="String" MaxLength="48" FixedLength="true" Unicode="true" />
+          <Property Name="TASKID" Type="String" MaxLength="64" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TASKUSER" Type="String" MaxLength="256" FixedLength="true" Unicode="true" />
+          <Property Name="STATUS" Type="Int32" />
+          <Property Name="Process" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CodigoTipoContratacion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CodigoTipoCompra" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CodigoInicialesEntidad" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NumeroSecuenciaProceso" Type="Int32" Nullable="false" />
+          <Property Name="AnioCurso" Type="Int32" Nullable="false" />
+          <Property Name="ObjetoContratacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CodigoEstadoProceso" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Step" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaProgramada" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="ULT_BPMEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="vw_Completed" EntityType="Self.vw_Completed" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ULT_BPMModelStoreContainer" CdmEntityContainer="ULT_BPMEntities">
+          <EntitySetMapping Name="vw_Completed">
+            <EntityTypeMapping TypeName="ULT_BPMModel.vw_Completed">
+              <MappingFragment StoreEntitySet="vw_Completed">
+                <ScalarProperty Name="PROCESSNAME" ColumnName="PROCESSNAME" />
+                <ScalarProperty Name="INCIDENT" ColumnName="INCIDENT" />
+                <ScalarProperty Name="STEPID" ColumnName="STEPID" />
+                <ScalarProperty Name="STEPLABEL" ColumnName="STEPLABEL" />
+                <ScalarProperty Name="TASKID" ColumnName="TASKID" />
+                <ScalarProperty Name="TASKUSER" ColumnName="TASKUSER" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="Process" ColumnName="Process" />
+                <ScalarProperty Name="CodigoTipoContratacion" ColumnName="CodigoTipoContratacion" />
+                <ScalarProperty Name="CodigoTipoCompra" ColumnName="CodigoTipoCompra" />
+                <ScalarProperty Name="CodigoInicialesEntidad" ColumnName="CodigoInicialesEntidad" />
+                <ScalarProperty Name="NumeroSecuenciaProceso" ColumnName="NumeroSecuenciaProceso" />
+                <ScalarProperty Name="AnioCurso" ColumnName="AnioCurso" />
+                <ScalarProperty Name="ObjetoContratacion" ColumnName="ObjetoContratacion" />
+                <ScalarProperty Name="CodigoEstadoProceso" ColumnName="CodigoEstadoProceso" />
+                <ScalarProperty Name="Step" ColumnName="Step" />
+                <ScalarProperty Name="FechaProgramada" ColumnName="FechaProgramada" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
