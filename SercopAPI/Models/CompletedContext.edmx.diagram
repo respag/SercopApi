@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="3258b95a91724589a3716c469ff179dc" Name="Diagram1">
         <EntityTypeShape EntityType="ULT_BPMModel.vw_Completed" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ULT_BPMModel.vw_Inbox" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

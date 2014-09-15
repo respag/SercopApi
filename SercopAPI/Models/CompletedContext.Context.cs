@@ -26,5 +26,6 @@ namespace InitiateAPI.Models
         }
     
         public virtual DbSet<vw_Completed> vw_Completed { get; set; }
+        public virtual DbSet<vw_Inbox> vw_Inbox { get; set; }
     }
 }
