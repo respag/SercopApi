@@ -22,14 +22,10 @@ namespace InitiateAPI.Models
         public string TASKUSER { get; set; }
         public Nullable<int> STATUS { get; set; }
         public string Process { get; set; }
-        public string CodigoTipoContratacion { get; set; }
-        public string CodigoTipoCompra { get; set; }
-        public string CodigoInicialesEntidad { get; set; }
-        public int NumeroSecuenciaProceso { get; set; }
-        public int AnioCurso { get; set; }
+        public string CodigoProceso { get; set; }
         public string ObjetoContratacion { get; set; }
-        public string CodigoEstadoProceso { get; set; }
         public string Step { get; set; }
         public System.DateTime FechaProgramada { get; set; }
+        public Nullable<int> PROCESSVERSION { get; set; }
     }
 }

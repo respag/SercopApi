@@ -1,9 +1,11 @@
 ﻿using InitiateAPI.Models;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace InitiateAPI.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class InboxController : ApiController
     {
         private ULT_BPMEntities db = new ULT_BPMEntities();
