@@ -110,7 +110,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CompletedController.cs" />
     <Compile Include="Controllers\InboxController.cs" />
+    <Compile Include="Controllers\InboxProveedoresController.cs" />
     <Compile Include="Controllers\InitiatesController.cs" />
+    <Compile Include="Controllers\CompletedProveedoresController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -129,11 +131,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CompletedContext.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Initiate.cs" />
     <Compile Include="Models\vw_Completed.cs">
       <DependentUpon>CompletedContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\vw_CompletedProveedores.cs">
+      <DependentUpon>CompletedContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\vw_Inbox.cs">
+      <DependentUpon>CompletedContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_InboxProveedores.cs">
       <DependentUpon>CompletedContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

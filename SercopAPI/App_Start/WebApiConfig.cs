@@ -22,6 +22,13 @@ namespace InitiateAPI
                 defaults: new {  action = "Get" },
                 constraints: new { httpMethod = new HttpMethodConstraint("GET") }
             );
+
+            config.Routes.MapHttpRoute(
+                name: "ApiProveedores",
+                routeTemplate: "api/{controller}/{user}",
+                defaults: new { action = "Get" },
+                constraints: new { httpMethod = new HttpMethodConstraint("GET") }
+            );
         }
     }
 }
