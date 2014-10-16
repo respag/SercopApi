@@ -25,7 +25,7 @@ namespace InitiateAPI.Models
         public string CodigoProceso { get; set; }
         public string ObjetoContratacion { get; set; }
         public string Step { get; set; }
-        public System.DateTime FechaProgramada { get; set; }
+        public Nullable<System.DateTime> FechaProgramada { get; set; }
         public Nullable<int> PROCESSVERSION { get; set; }
     }
 }
