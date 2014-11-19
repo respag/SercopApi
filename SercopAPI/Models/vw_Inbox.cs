@@ -21,11 +21,10 @@ namespace InitiateAPI.Models
         public string TASKID { get; set; }
         public string TASKUSER { get; set; }
         public Nullable<int> STATUS { get; set; }
-        public string Process { get; set; }
         public string CodigoProceso { get; set; }
         public string ObjetoContratacion { get; set; }
-        public string Step { get; set; }
         public Nullable<System.DateTime> FechaProgramada { get; set; }
         public Nullable<int> PROCESSVERSION { get; set; }
+        public string ESTADOPROCESO { get; set; }
     }
 }
